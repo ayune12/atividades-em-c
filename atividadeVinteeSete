@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float preco;
+    printf("Informe o preço do produto: ");
+    scanf("%f", &preco);
+
+    if (preco < 100){
+        preco *= 1.1;}else{
+        preco *= 1.2;}
+
+    printf("Este é o preço atual: %.1f", preco);
+    return 0;
+}
