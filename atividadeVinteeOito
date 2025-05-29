@@ -1,0 +1,27 @@
+ #include <stdio.h>
+
+int main() {
+     int tg, opcao;
+  printf("Qual será o valor pago?\n");
+  scanf("%d", &tg);
+
+  printf("1 - Será à vista\n");
+  printf("2 - Será no cartão,duas vezes, sem juros.\n");
+  printf("3 - Será no cartão, quatro vezes, com juros\n");
+  scanf("%d",&opcao);
+
+  if(opcao == 1){
+    printf("Será pago R$ %d, o valor integral",tg);
+  }
+  if(opcao == 2){
+float parcela;
+    parcela = tg/2;
+    printf("Será pago duas parcelas de R$ %.2f",parcela);
+  }
+  if(opcao == 3){
+float pj;
+    pj = (tg * 1.1)/4;
+    printf("Será pago quatro parcelas de R$ %.2f",pj);
+  }
+    return 0;
+}
