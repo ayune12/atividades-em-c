@@ -749,3 +749,112 @@ int main() {
 
     return 0;
 }
+
+33)
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char texto[100];
+    int contador = 0;
+
+    printf("Digite uma frase: ");
+    fgets(texto, sizeof(texto), stdin); 
+
+    for (int i = 0; i < strlen(texto); i++) {
+        if (isalpha(texto[i])) { 
+            contador++;
+        }
+    }
+
+    printf("Quantidade de letras: %d\n", contador);
+
+    return 0;
+}
+
+34)
+
+
+#include <stdio.h>
+
+int main() {
+    char nome[50], endereco[100], telefone[20];
+    int idade;
+
+    printf("Digite seu nome: ");
+    scanf(" %[^\n]", nome); 
+
+    printf("Digite seu endereco: ");
+    scanf(" %[^\n]", endereco);
+
+    printf("Digite seu telefone: ");
+    scanf(" %[^\n]", telefone);
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("\nSeu nome é %s, você tem %d anos, mora na rua %s e seu telefone é %s.\n",
+           nome, idade, endereco, telefone);
+
+    return 0;
+}
+
+35)
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char resposta[10];
+
+    printf("Digite SIM ou NAO: ");
+    scanf("%s", resposta);
+
+    if (strcmp(resposta, "SIM") == 0) {
+        printf("1\n");
+    } else if (strcmp(resposta, "NAO") == 0) {
+        printf("0\n");
+    } else {
+        printf("Entrada invalida.\n");
+    }
+
+    return 0;
+}
+
+36)
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char numero[50];  
+
+    printf("Digite um numero inteiro: ");
+    scanf("%s", numero); 
+
+    printf("Soletrando: ");
+    for (int i = 0; i < strlen(numero); i++) {
+        switch (numero[i]) {
+            case '0': printf("zero "); break;
+            case '1': printf("um "); break;
+            case '2': printf("dois "); break;
+            case '3': printf("tres "); break;
+            case '4': printf("quatro "); break;
+            case '5': printf("cinco "); break;
+            case '6': printf("seis "); break;
+            case '7': printf("sete "); break;
+            case '8': printf("oito "); break;
+            case '9': printf("nove "); break;
+            case '-': printf("menos "); break;
+            default: printf("? "); break;
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+
+37)
+
